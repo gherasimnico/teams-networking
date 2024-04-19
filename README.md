@@ -5,10 +5,10 @@ wwwwwwwwwwwwwwwwwwwwwwwwwww wwwwwwwwwwwwwwwwwwwwwwwwww wwwwwwwwwwwwwwwwwwwwww ww
 ## 💠 Features & Usage
 
 - [x] Teams Networking (CRUD\*) Operations
-  - [ ] Create
-  - [x] Read
-  - [ ] Update
-  - [ ] Delete
+  - [ ] **C**reate
+  - [x] **R**ead
+  - [ ] **U**pdate
+  - [ ] **D**elete
 - [ ] Search
 - [ ] Loading mask
 
