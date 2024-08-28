@@ -17,7 +17,7 @@ wwwwwwwwwwwwwwwwwwwwwwwwwww wwwwwwwwwwwwwwwwwwwwwwwwww wwwwwwwwwwwwwwwwwwwwww ww
 Start node-API
 
 ```sh
-cd C:\Users\nicu_\Desktop\Products\node-api
+cd C:\\Users\\nicu_\\Desktop\\Products\\node-api
 npm start
 ```
 
