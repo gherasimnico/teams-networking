@@ -102,6 +102,18 @@ function loadTeams() {
       console.timeEnd("app-ready");
     });
 }
+function updateTeam(teams, team) {
+  return teams.map(t => {
+    if (t.id === team.id) {
+      //console.info("edited", t, team);
+      return {
+        ...t,
+        ...team
+      };
+    }
+    return t;
+  });
+}
 
 function onSubmit(e) {
   e.preventDefault();
@@ -113,8 +125,10 @@ function onSubmit(e) {
     console.warn("should we edit?", editId, team);
     updateTeamRequest(team).then(status => {
       //console.warn("status", status);
-      if (status.succes) {
-        window.location.reload();
+      if (status.success) {
+        allTeams = updateTeam(allTeams, team);
+        renderTeams(allTeams);
+        $("#teamsForm").reset();
       }
     });
   } else {
