@@ -56,15 +56,15 @@ function getTeamAsHTML(team) {
   </tr>`;
 }
 
-function areTeamsEquals(renderTeams, teams) {
+function areTeamsEquals(renderedTeams, teams) {
   if (renderedTeams === teams) {
-    //console.info(`same array`);
+    console.info(`same array`);
     return true;
   }
   if (renderedTeams.length === teams.length) {
     const eq = renderedTeams.every((team, i) => team === teams[i]);
     if (eq) {
-      //console.info("same content in different arrays");
+      console.info("same content in different arrays");
       return true;
     }
   }
@@ -122,6 +122,7 @@ function onSubmit(e) {
       console.warn("status", status, team);
       if (status.success) {
         team.id = status.id;
+        allTeams = allTeams.map(team => team);
         allTeams.push(team);
         renderTeams(allTeams);
         $("#teamsForm").reset();
@@ -129,7 +130,6 @@ function onSubmit(e) {
     });
   }
 }
-
 function startEdit(id) {
   editId = id;
   const team = allTeams.find(team => team.id === id);
