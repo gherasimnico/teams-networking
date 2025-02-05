@@ -1,7 +1,5 @@
 # teams-networking
 
-wwwwwwwwwwwwwwwwwwwwwwwwwww wwwwwwwwwwwwwwwwwwwwwwwwww wwwwwwwwwwwwwwwwwwwwww wwwwwwwwww wwwwwwwwwwwwwwwww wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-
 ## 💠 Features & Usage
 
 - [x] Teams Networking (CRUD\*) Operations
