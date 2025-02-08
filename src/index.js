@@ -175,8 +175,11 @@ function initEvents() {
 }
 
 initEvents();
+
+$("#teamsTable tbody").classList.add("loading-mask");
 loadTeams().then(() => {
   console.timeEnd("app-ready");
+  $("#teamsTable tbody").classList.remove("loading-mask");
 });
 // - this code blockes the main thread
 // await loadTeams();
