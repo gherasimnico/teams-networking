@@ -11,6 +11,9 @@ const formSelector = "#teamsForm";
 function getTeamAsHTML({ id, promotion, members, name, url }) {
   const displayUrl = url.startsWith("http://github.com/") ? url.substring(19) : url;
   return `  <tr>
+    <td class="select-row">
+      <input type="checkbox" name="selected" value=$"{id}"/>
+    </td>
     <td>${promotion}</td>
     <td>${members}</td>
     <td>${name}</td>
