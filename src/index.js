@@ -12,7 +12,7 @@ function getTeamAsHTML({ id, promotion, members, name, url }) {
   const displayUrl = url.startsWith("http://github.com/") ? url.substring(19) : url;
   return `  <tr>
     <td class="select-row">
-      <input type="checkbox" name="selected" value=$"{id}"/>
+      <input type="checkbox" name="selected" value="${id}"/>
     </td>
     <td>${promotion}</td>
     <td>${members}</td>
@@ -147,7 +147,23 @@ function filterElements(teams, search) {
   });
 }
 
+async function removeSelected() {
+  mask("#main");
+  const selected = document.querySelectorAll("input[name=selected]:checked");
+  const ids = [...selected].map(input => input.value);
+  console.log("IDs to remove:", ids);
+  const promises = ids.map(id => deleteTeamRequest(id));
+  const statuses = await Promise.allSettled(promises);
+  console.warn("remove selected", statuses);
+  await loadTeams();
+  console.log("Teams reloaded");
+
+  unmask("#main");
+}
+
 function initEvents() {
+  $("#removeSelected").addEventListener("click", removeSelected);
+
   $("#search").addEventListener(
     "input",
     debounce(e => {
