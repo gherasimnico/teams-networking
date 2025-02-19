@@ -3,12 +3,13 @@
 ## 💠 Features & Usage
 
 - [x] Teams Networking (CRUD\*) Operations
-  - [ ] **C**reate
+  - [x] **C**reate
   - [x] **R**ead
-  - [ ] **U**pdate
-  - [ ] **D**elete
-- [ ] Search
-- [ ] Loading mask
+  - [x] **U**pdate
+  - [x] **D**elete
+- [x] Search
+- [x] Loading mask
+- [x] Multi remove
 
 ## Start (Daily usage)
 
